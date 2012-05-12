@@ -49,4 +49,4 @@ if __name__ == '__main__':
 
 # Write graphviz output file
 write_gv(options['out'], nodes, edges)
-
+print 'Created tree with %d persons' % len(nodes)
