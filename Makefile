@@ -1,16 +1,14 @@
 infile = relations.txt
 outgv  = tree.gv
-outps  = tree.ps
-outpdf = tree.pdf
+outpng = tree.png
 
 view: tree
-	open $(outpdf)
+	open $(outpng)
 
 tree:
 	python tree.py --in $(infile) --out $(outgv)
-	dot $(outgv) -Tps -o $(outps)
-	ps2pdf $(outps)
+	dot -Tpng $(outgv) > $(outpng)
 
 clean:
-	rm -f $(outgv) $(outps) $(outpdf)
+	rm -f $(outgv) $(outpng)
 

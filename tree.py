@@ -2,9 +2,7 @@ import argparse
 
 GV_HEADER = '''
 digraph tree {
-  size = "8,28"
-  node [color = grey, style = filled];
-  node [fontname = "Verdana", size = "30,30"];
+node [color = grey, style = filled];
 '''
 
 GV_FOOTER = '''
@@ -51,3 +49,4 @@ if __name__ == '__main__':
 
 # Write graphviz output file
 write_gv(options['out'], nodes, edges)
+
